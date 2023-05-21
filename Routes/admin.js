@@ -124,6 +124,7 @@ router.get('/verifyticket/:id', async (req, res) => {
             return res.status(404).send("Not Found");
         }
         ticket.visited = true;
+        ticket.visitedOn = Date.now()
         const a1 = await ticket.save();
         res.json(a1);
     } catch (error) {

@@ -39,10 +39,12 @@ const TicketSchema = new Schema({
         type: Boolean,
         default: false
     },
+    visitedOn: {
+        type : Number,
+    },
     date: {
-        type: String,
-        default: Date.now
+        type: Number,
+        default: Date
     }
-
 });
 module.exports = mongoose.model('tickets', TicketSchema);
