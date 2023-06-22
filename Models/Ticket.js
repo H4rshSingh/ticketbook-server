@@ -43,7 +43,7 @@ const TicketSchema = new Schema({
         type : Number,
     },
     date: {
-        type: Number,
+        type: Date,
         default: Date
     }
 });
